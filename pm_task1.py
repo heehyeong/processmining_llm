@@ -18,7 +18,6 @@ net, initial_marking, final_marking = heuristic_miner.apply(log)
 gviz = pn_visualizer.apply(net, initial_marking, final_marking)
 pn_visualizer.view(gviz)
 
-
 # print(pm4py.llm.abstract_variants(log))
 
 # for trace in log[:2]:  # 처음 두 케이스만 출력해보기

@@ -1,0 +1,23 @@
+=== Detailed XAI Feature Importance Analysis ===
+Total number of activities analyzed: 11
+Total absolute importance sum: 30,675,554
+
+Activity-wise Impact Rankings:
+1. 'Add penalty': Absolute Impact = 21,206,534, Relative Importance = 69.13%
+2. 'Send for Credit Collection': Absolute Impact = 6,574,380, Relative Importance = 21.43%
+3. 'Send Fine': Absolute Impact = 1,897,450, Relative Importance = 6.19%
+4. 'Payment': Absolute Impact = 556,632, Relative Importance = 1.81%
+5. 'Appeal to Judge': Absolute Impact = 165,871, Relative Importance = 0.54%
+6. 'Insert Date Appeal to Prefecture': Absolute Impact = 132,383, Relative Importance = 0.43%
+7. 'Notify Result Appeal to Offender': Absolute Impact = 52,985, Relative Importance = 0.17%
+8. 'Send Appeal to Prefecture': Absolute Impact = 50,543, Relative Importance = 0.16%
+9. 'Receive Result Appeal from Prefecture': Absolute Impact = 38,775, Relative Importance = 0.13%
+10. 'Create Fine': Absolute Impact = 0, Relative Importance = 0.00%
+11. 'Insert Fine Notification': Absolute Impact = 0, Relative Importance = 0.00%
+
+Top 5 Most Influential Activities:
+- Add penalty: High impact (69.13% of total influence)
+- Send for Credit Collection: High impact (21.43% of total influence)
+- Send Fine: Medium impact (6.19% of total influence)
+- Payment: Low impact (1.81% of total influence)
+- Appeal to Judge: Low impact (0.54% of total influence)

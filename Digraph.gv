@@ -1,0 +1,61 @@
+digraph {
+	"Send Fine"
+	Payment
+	"Send Appeal to Prefecture"
+	"Receive Result Appeal from Prefecture"
+	"Insert Date Appeal to Prefecture"
+	"Appeal to Judge"
+	"Add penalty"
+	"Notify Result Appeal to Offender"
+	"Send for Credit Collection"
+	"Insert Fine Notification"
+	"Create Fine"
+	or_0 [shape=diamond]
+	or_1 [shape=diamond]
+	or_2 [shape=diamond]
+	XOR_0 [shape=diamond]
+	XOR_1 [shape=diamond]
+	or_3 [shape=diamond]
+	or_4 [shape=diamond]
+	or_4 -> "Send Fine"
+	"Add penalty" -> Payment
+	or_0 -> Payment
+	or_2 -> Payment
+	XOR_0 -> Payment
+	XOR_1 -> Payment
+	or_3 -> Payment
+	or_4 -> Payment
+	or_0 -> "Send Appeal to Prefecture"
+	or_2 -> "Send Appeal to Prefecture"
+	"Send Appeal to Prefecture" -> "Receive Result Appeal from Prefecture"
+	or_0 -> "Receive Result Appeal from Prefecture"
+	or_2 -> "Receive Result Appeal from Prefecture"
+	or_3 -> "Receive Result Appeal from Prefecture"
+	or_4 -> "Receive Result Appeal from Prefecture"
+	or_0 -> "Insert Date Appeal to Prefecture"
+	or_3 -> "Insert Date Appeal to Prefecture"
+	or_4 -> "Insert Date Appeal to Prefecture"
+	or_0 -> "Appeal to Judge"
+	or_1 -> "Appeal to Judge"
+	XOR_1 -> "Appeal to Judge"
+	or_3 -> "Appeal to Judge"
+	or_4 -> "Appeal to Judge"
+	or_3 -> "Add penalty"
+	or_1 -> "Notify Result Appeal to Offender"
+	or_0 -> "Send for Credit Collection"
+	or_1 -> "Send for Credit Collection"
+	XOR_0 -> "Send for Credit Collection"
+	XOR_1 -> "Send for Credit Collection"
+	or_4 -> "Send for Credit Collection"
+	or_0 -> "Insert Fine Notification"
+	"Send Fine" -> or_0
+	"Receive Result Appeal from Prefecture" -> or_1
+	"Insert Date Appeal to Prefecture" -> or_2
+	"Appeal to Judge" -> XOR_0
+	"Notify Result Appeal to Offender" -> XOR_1
+	"Insert Fine Notification" -> or_3
+	"Create Fine" -> or_4
+	{
+		rank=same
+	}
+}

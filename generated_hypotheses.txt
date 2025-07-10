@@ -1,0 +1,5 @@
+Based on the provided views, here are some concise hypotheses:
+
+1.  **Divergent Main Paths:** The process is characterized by two dominant, diverging high-frequency paths: one for immediate payment (`Create Fine -> Payment`), and another for comprehensive fine processing that often leads to credit collection (`Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Send for Credit Collection`).
+2.  **Duration Drivers:** Specific activities, notably 'Add penalty' and 'Send for Credit Collection', are critical determinants of increased case duration, indicating that cases progressing to these stages are significantly more time-consuming.
+3.  **Exception Handling:** Appeal mechanisms (to Prefecture or Judge) represent less frequent, complex deviations from the main flows, likely adding significant time and steps when invoked.

@@ -1,0 +1,89 @@
+=== SAX4BPM Enhanced Multi-View Process Analysis ===
+
+DETAILED PROCESS VIEW:
+=== Detailed Process View Analysis ===
+Total unique activities: 11
+Total cases: 150370
+Total events: 561470
+Average events per case: 3.7
+
+Activity Frequency Analysis:
+1. 'Create Fine': 150370 occurrences (26.8% of all events)
+2. 'Send Fine': 103987 occurrences (18.5% of all events)
+3. 'Insert Fine Notification': 79860 occurrences (14.2% of all events)
+4. 'Add penalty': 79860 occurrences (14.2% of all events)
+5. 'Payment': 77601 occurrences (13.8% of all events)
+6. 'Send for Credit Collection': 59013 occurrences (10.5% of all events)
+7. 'Insert Date Appeal to Prefecture': 4188 occurrences (0.7% of all events)
+8. 'Send Appeal to Prefecture': 4141 occurrences (0.7% of all events)
+9. 'Receive Result Appeal from Prefecture': 999 occurrences (0.2% of all events)
+10. 'Notify Result Appeal to Offender': 896 occurrences (0.2% of all events)
+11. 'Appeal to Judge': 555 occurrences (0.1% of all events)
+
+Case Duration Statistics:
+- Average case duration: 8200.1 hours
+- Median case duration: 4752.0 hours
+- Shortest case: 0.0 hours
+- Longest case: 104928.0 hours
+
+Process Variants:
+- Total unique variants: 231
+- Most common variant frequency: 56482 cases
+- Variant diversity: 0.00 (1.0 = all cases unique)
+
+
+DETAILED CAUSAL VIEW:
+=== Detailed Causal Discovery Analysis ===
+
+Causal Interpretation:
+- LiNGAM algorithm identified directional dependencies between process activities
+- Causal relationships indicate which activities influence the execution of others
+- These dependencies can reveal bottlenecks and optimization opportunities
+- Causal structure provides insights into process flow patterns and decision points
+
+
+DETAILED XAI VIEW:
+=== Detailed XAI Feature Importance Analysis ===
+Total number of activities analyzed: 11
+Total absolute importance sum: 30,675,554
+
+Activity-wise Impact Rankings:
+1. 'Add penalty': Absolute Impact = 21,206,534, Relative Importance = 69.13%
+2. 'Send for Credit Collection': Absolute Impact = 6,574,380, Relative Importance = 21.43%
+3. 'Send Fine': Absolute Impact = 1,897,450, Relative Importance = 6.19%
+4. 'Payment': Absolute Impact = 556,632, Relative Importance = 1.81%
+5. 'Appeal to Judge': Absolute Impact = 165,871, Relative Importance = 0.54%
+6. 'Insert Date Appeal to Prefecture': Absolute Impact = 132,383, Relative Importance = 0.43%
+7. 'Notify Result Appeal to Offender': Absolute Impact = 52,985, Relative Importance = 0.17%
+8. 'Send Appeal to Prefecture': Absolute Impact = 50,543, Relative Importance = 0.16%
+9. 'Receive Result Appeal from Prefecture': Absolute Impact = 38,775, Relative Importance = 0.13%
+10. 'Create Fine': Absolute Impact = 0, Relative Importance = 0.00%
+11. 'Insert Fine Notification': Absolute Impact = 0, Relative Importance = 0.00%
+
+Top 5 Most Influential Activities:
+- Add penalty: High impact (69.13% of total influence)
+- Send for Credit Collection: High impact (21.43% of total influence)
+- Send Fine: Medium impact (6.19% of total influence)
+- Payment: Low impact (1.81% of total influence)
+- Appeal to Judge: Low impact (0.54% of total influence)
+
+
+ANALYSIS INTEGRATION:
+The above comprehensive analysis combines three detailed perspectives:
+1. Process View: Complete activity statistics, case durations, and variant analysis
+2. Causal View: Specific causal dependencies and relationships between activities  
+3. XAI View: Quantitative feature importance with absolute and relative impact measures
+
+QUESTION: Based on the detailed analysis, can you formulate specific, data-driven hypotheses for process optimization?
+
+Please provide detailed, data-driven hypotheses based on the comprehensive analysis above. Consider:
+- Specific activities mentioned in the XAI analysis with their impact scores
+- Causal relationships identified in the causal analysis
+- Process patterns and statistics from the process view
+- Concrete, actionable recommendations for process improvement
+
+Format your response with:
+1. Three specific hypotheses with supporting data
+2. Simulation scenarios for each hypothesis
+3. Expected outcomes with measurable KPIs
+4. Implementation considerations

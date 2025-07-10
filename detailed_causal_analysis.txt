@@ -1,0 +1,7 @@
+=== Detailed Causal Discovery Analysis ===
+
+Causal Interpretation:
+- LiNGAM algorithm identified directional dependencies between process activities
+- Causal relationships indicate which activities influence the execution of others
+- These dependencies can reveal bottlenecks and optimization opportunities
+- Causal structure provides insights into process flow patterns and decision points

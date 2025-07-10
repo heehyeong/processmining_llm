@@ -1,0 +1,29 @@
+=== Detailed Process View Analysis ===
+Total unique activities: 11
+Total cases: 150370
+Total events: 561470
+Average events per case: 3.7
+
+Activity Frequency Analysis:
+1. 'Create Fine': 150370 occurrences (26.8% of all events)
+2. 'Send Fine': 103987 occurrences (18.5% of all events)
+3. 'Insert Fine Notification': 79860 occurrences (14.2% of all events)
+4. 'Add penalty': 79860 occurrences (14.2% of all events)
+5. 'Payment': 77601 occurrences (13.8% of all events)
+6. 'Send for Credit Collection': 59013 occurrences (10.5% of all events)
+7. 'Insert Date Appeal to Prefecture': 4188 occurrences (0.7% of all events)
+8. 'Send Appeal to Prefecture': 4141 occurrences (0.7% of all events)
+9. 'Receive Result Appeal from Prefecture': 999 occurrences (0.2% of all events)
+10. 'Notify Result Appeal to Offender': 896 occurrences (0.2% of all events)
+11. 'Appeal to Judge': 555 occurrences (0.1% of all events)
+
+Case Duration Statistics:
+- Average case duration: 8200.1 hours
+- Median case duration: 4752.0 hours
+- Shortest case: 0.0 hours
+- Longest case: 104928.0 hours
+
+Process Variants:
+- Total unique variants: 231
+- Most common variant frequency: 56482 cases
+- Variant diversity: 0.00 (1.0 = all cases unique)

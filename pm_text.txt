@@ -1,0 +1,186 @@
+If I have a process with the following process variants:
+
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Send for Credit Collection ( frequency = 56482  performance = 59591524.946 )
+ Create Fine -> Payment ( frequency = 46371  performance = 889688.400 )
+ Create Fine -> Send Fine ( frequency = 20385  performance = 8380516.026 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Payment ( frequency = 9520  performance = 35037723.025 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Payment -> Payment ( frequency = 3736  performance = 27487271.949 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Payment -> Add penalty -> Payment ( frequency = 3301  performance = 22266910.633 )
+ Create Fine -> Send Fine -> Payment ( frequency = 3131  performance = 10147598.595 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Add penalty -> Send Appeal to Prefecture ( frequency = 2497  performance = 36264851.582 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Payment -> Send for Credit Collection ( frequency = 1515  performance = 58289146.931 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Payment -> Add penalty -> Send for Credit Collection ( frequency = 522  performance = 54309682.759 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture ( frequency = 443  performance = 39950735.892 )
+ Create Fine -> Payment -> Send Fine ( frequency = 362  performance = 5545113.812 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Add penalty -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Payment ( frequency = 139  performance = 30608598.561 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Appeal to Judge -> Add penalty -> Payment ( frequency = 135  performance = 55173760.000 )
+ Create Fine -> Send Fine -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture ( frequency = 126  performance = 18823542.857 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Add penalty -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Payment ( frequency = 114  performance = 25955621.053 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Appeal to Judge -> Add penalty -> Send for Credit Collection ( frequency = 108  performance = 90716800.000 )
+ Create Fine -> Payment -> Send Fine -> Insert Fine Notification -> Add penalty -> Payment ( frequency = 89  performance = 24426930.337 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Add penalty -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Send for Credit Collection ( frequency = 88  performance = 76702581.818 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Add penalty -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Send for Credit Collection ( frequency = 81  performance = 67111466.667 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Payment -> Payment -> Payment ( frequency = 69  performance = 47844313.043 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Payment ( frequency = 61  performance = 40763803.279 )
+ Create Fine -> Payment -> Send Fine -> Payment ( frequency = 58  performance = 8662344.828 )
+ Create Fine -> Send Fine -> Payment -> Insert Fine Notification -> Add penalty -> Payment ( frequency = 56  performance = 20088000.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Send for Credit Collection ( frequency = 49  performance = 76229485.714 )
+ Create Fine -> Payment -> Send Fine -> Insert Fine Notification -> Add penalty -> Send for Credit Collection ( frequency = 45  performance = 61676160.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Add penalty -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Appeal to Judge ( frequency = 42  performance = 28246628.571 )
+ Create Fine -> Send Fine -> Payment -> Payment ( frequency = 34  performance = 16001788.235 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Appeal to Judge ( frequency = 32  performance = 17523000.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Add penalty -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender ( frequency = 30  performance = 21058560.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Appeal to Judge -> Payment ( frequency = 23  performance = 66126052.174 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Add penalty -> Receive Result Appeal from Prefecture ( frequency = 22  performance = 15536290.909 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Add penalty -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Appeal to Judge -> Payment ( frequency = 20  performance = 55002240.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Add penalty -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Appeal to Judge ( frequency = 20  performance = 25539840.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender ( frequency = 20  performance = 24459840.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Payment -> Payment -> Add penalty -> Payment ( frequency = 20  performance = 22852800.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Appeal to Judge -> Add penalty -> Payment -> Payment ( frequency = 19  performance = 66487073.684 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Add penalty -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture ( frequency = 19  performance = 20695073.684 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Add penalty -> Payment ( frequency = 17  performance = 36008470.588 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Appeal to Judge -> Send for Credit Collection ( frequency = 16  performance = 98982000.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Add penalty -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Payment ( frequency = 15  performance = 26933760.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Add penalty -> Notify Result Appeal to Offender -> Payment ( frequency = 15  performance = 25251840.000 )
+ Create Fine -> Send Fine -> Payment -> Insert Fine Notification -> Add penalty -> Send for Credit Collection ( frequency = 14  performance = 54709714.286 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Payment -> Add penalty -> Payment -> Payment ( frequency = 14  performance = 26117485.714 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Payment -> Payment -> Payment -> Payment ( frequency = 13  performance = 52810338.462 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Add penalty -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender ( frequency = 13  performance = 20184369.231 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Insert Date Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Payment ( frequency = 12  performance = 36331200.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Add penalty -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Appeal to Judge ( frequency = 12  performance = 28108800.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Add penalty -> Receive Result Appeal from Prefecture -> Payment ( frequency = 12  performance = 24580800.000 )
+ Create Fine -> Payment -> Payment ( frequency = 12  performance = 12614400.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Receive Result Appeal from Prefecture -> Add penalty -> Notify Result Appeal to Offender -> Send for Credit Collection ( frequency = 11  performance = 82040727.273 )
+ Create Fine -> Send Fine -> Insert Date Appeal to Prefecture -> Insert Fine Notification -> Add penalty -> Send Appeal to Prefecture ( frequency = 10  performance = 77950080.000 )
+ Create Fine -> Insert Date Appeal to Prefecture -> Send Fine -> Insert Fine Notification -> Add penalty -> Send Appeal to Prefecture ( frequency = 9  performance = 131155200.000 )
+ Create Fine -> Send Fine -> Insert Fine Notification -> Insert Date Appeal to Prefecture -> Send Appeal to Prefecture -> Add penalty -> Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender -> Appeal to Judge -> Payment ( frequency = 9  performance = 53961600.000 )
+
+
+
+    process model: If I have a process with flow:
+
+Create Fine -> Send Fine ( frequency = 103392  performance = 7568635.655 )
+Send Fine -> Insert Fine Notification ( frequency = 79757  performance = 1501626.952 )
+Insert Fine Notification -> Add penalty ( frequency = 72334  performance = 5184000.000 )
+Add penalty -> Send for Credit Collection ( frequency = 57182  performance = 45566346.445 )
+Create Fine -> Payment ( frequency = 46952  performance = 905663.452 )
+Add penalty -> Payment ( frequency = 18621  performance = 13913160.754 )
+Payment -> Payment ( frequency = 4306  performance = 8288440.687 )
+Payment -> Add penalty ( frequency = 3902  performance = 2866411.891 )
+Insert Fine Notification -> Payment ( frequency = 3891  performance = 2297249.653 )
+Insert Fine Notification -> Insert Date Appeal to Prefecture ( frequency = 3327  performance = 2865431.199 )
+Send Fine -> Payment ( frequency = 3300  performance = 4297431.273 )
+Insert Date Appeal to Prefecture -> Add penalty ( frequency = 2933  performance = 2085471.531 )
+Add penalty -> Send Appeal to Prefecture ( frequency = 2915  performance = 19844197.873 )
+Payment -> Send for Credit Collection ( frequency = 1538  performance = 38387272.822 )
+Insert Date Appeal to Prefecture -> Send Appeal to Prefecture ( frequency = 1159  performance = 10900489.387 )
+Receive Result Appeal from Prefecture -> Notify Result Appeal to Offender ( frequency = 829  performance = 2521129.071 )
+Add penalty -> Insert Date Appeal to Prefecture ( frequency = 658  performance = 3280048.632 )
+Send Appeal to Prefecture -> Receive Result Appeal from Prefecture ( frequency = 606  performance = 4584617.822 )
+Payment -> Send Fine ( frequency = 569  performance = 3858238.313 )
+Notify Result Appeal to Offender -> Payment ( frequency = 391  performance = 7494039.898 )
+Add penalty -> Receive Result Appeal from Prefecture ( frequency = 351  performance = 4315815.385 )
+Send Appeal to Prefecture -> Add penalty ( frequency = 347  performance = 1943626.513 )
+Insert Fine Notification -> Appeal to Judge ( frequency = 290  performance = 2614642.759 )
+Appeal to Judge -> Add penalty ( frequency = 281  performance = 2479157.295 )
+Notify Result Appeal to Offender -> Send for Credit Collection ( frequency = 257  performance = 51428171.206 )
+Send Fine -> Insert Date Appeal to Prefecture ( frequency = 161  performance = 3139915.528 )
+Notify Result Appeal to Offender -> Appeal to Judge ( frequency = 145  performance = 2031293.793 )
+Add penalty -> Appeal to Judge ( frequency = 80  performance = 6686280.000 )
+Payment -> Insert Fine Notification ( frequency = 74  performance = 664345.946 )
+Appeal to Judge -> Payment ( frequency = 70  performance = 33693531.429 )
+Add penalty -> Notify Result Appeal to Offender ( frequency = 53  performance = 5986052.830 )
+Receive Result Appeal from Prefecture -> Add penalty ( frequency = 51  performance = 1167247.059 )
+Receive Result Appeal from Prefecture -> Payment ( frequency = 36  performance = 5716800.000 )
+Insert Date Appeal to Prefecture -> Receive Result Appeal from Prefecture ( frequency = 35  performance = 7171200.000 )
+Appeal to Judge -> Send for Credit Collection ( frequency = 32  performance = 78381000.000 )
+Insert Date Appeal to Prefecture -> Insert Fine Notification ( frequency = 25  performance = 376704.000 )
+Create Fine -> Insert Date Appeal to Prefecture ( frequency = 22  performance = 3809454.545 )
+Send Appeal to Prefecture -> Payment ( frequency = 20  performance = 11530080.000 )
+Send for Credit Collection -> Send Appeal to Prefecture ( frequency = 16  performance = 71172000.000 )
+Insert Fine Notification -> Send Appeal to Prefecture ( frequency = 16  performance = 2235600.000 )
+Receive Result Appeal from Prefecture -> Send Appeal to Prefecture ( frequency = 15  performance = 31403520.000 )
+Insert Date Appeal to Prefecture -> Send Fine ( frequency = 15  performance = 4579200.000 )
+Appeal to Judge -> Insert Date Appeal to Prefecture ( frequency = 15  performance = 1082880.000 )
+Insert Date Appeal to Prefecture -> Payment ( frequency = 14  performance = 8140114.286 )
+Receive Result Appeal from Prefecture -> Appeal to Judge ( frequency = 13  performance = 2425846.154 )
+Notify Result Appeal to Offender -> Add penalty ( frequency = 12  performance = 561600.000 )
+Send Fine -> Appeal to Judge ( frequency = 10  performance = 2376000.000 )
+Appeal to Judge -> Send Appeal to Prefecture ( frequency = 9  performance = 56937600.000 )
+Appeal to Judge -> Notify Result Appeal to Offender ( frequency = 9  performance = 2822400.000 )
+Send Appeal to Prefecture -> Send Fine ( frequency = 7  performance = 3221485.714 )
+Insert Date Appeal to Prefecture -> Appeal to Judge ( frequency = 7  performance = 3295542.857 )
+Send Fine -> Send Appeal to Prefecture ( frequency = 4  performance = 1987200.000 )
+Send Appeal to Prefecture -> Notify Result Appeal to Offender ( frequency = 4  performance = 11210400.000 )
+Send Appeal to Prefecture -> Insert Fine Notification ( frequency = 4  performance = 820800.000 )
+Send Appeal to Prefecture -> Appeal to Judge ( frequency = 4  performance = 1792800.000 )
+Payment -> Send Appeal to Prefecture ( frequency = 4  performance = 1620000.000 )
+Create Fine -> Appeal to Judge ( frequency = 4  performance = 5270400.000 )
+Appeal to Judge -> Send Fine ( frequency = 4  performance = 7452000.000 )
+Send Appeal to Prefecture -> Send for Credit Collection ( frequency = 3  performance = 7948800.000 )
+Notify Result Appeal to Offender -> Send Appeal to Prefecture ( frequency = 3  performance = 55670400.000 )
+Send Appeal to Prefecture -> Insert Date Appeal to Prefecture ( frequency = 2  performance = 1512000.000 )
+Payment -> Receive Result Appeal from Prefecture ( frequency = 2  performance = 4406400.000 )
+Payment -> Insert Date Appeal to Prefecture ( frequency = 2  performance = 216000.000 )
+Payment -> Appeal to Judge ( frequency = 2  performance = 9460800.000 )
+Notify Result Appeal to Offender -> Receive Result Appeal from Prefecture ( frequency = 2  performance = 388800.000 )
+Insert Fine Notification -> Receive Result Appeal from Prefecture ( frequency = 2  performance = 4233600.000 )
+Receive Result Appeal from Prefecture -> Send for Credit Collection ( frequency = 1  performance = 46742400.000 )
+Receive Result Appeal from Prefecture -> Insert Date Appeal to Prefecture ( frequency = 1  performance = 1296000.000 )
+Payment -> Notify Result Appeal to Offender ( frequency = 1  performance = 2160000.000 )
+Appeal to Judge -> Receive Result Appeal from Prefecture ( frequency = 1  performance = 43459200.000 )
+
+
+
+    event log: 
+ Given the following features:
+
+Values for Event Attribute 'article':    number of non-zero values: 150370 ; quantiles of the non-zero: {0.0: 7.0, 0.25: 7.0, 0.5: 157.0, 0.75: 157.0, 1.0: 401.0}
+Value 'Create Fine' for Event Attribute 'concept:name':    number of non-zero values: 150370 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Values for Event Attribute 'amount':    number of non-zero values: 150334 ; quantiles of the non-zero: {0.0: 18.78, 0.25: 35.0, 0.5: 62.59, 0.75: 71.5, 1.0: 8000.0}
+Value 'A' for Event Attribute 'vehicleClass':    number of non-zero values: 146712 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Value 'Send Fine' for Event Attribute 'concept:name':    number of non-zero values: 103987 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Create Fine' -> 'Send Fine' for the Values of the Attribute 'concept:name':    number of non-zero values: 103392 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Value 'Insert Fine Notification' for Event Attribute 'concept:name':    number of non-zero values: 79860 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Value 'Add penalty' for Event Attribute 'concept:name':    number of non-zero values: 79860 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Send Fine' -> 'Insert Fine Notification' for the Values of the Attribute 'concept:name':    number of non-zero values: 79757 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Insert Fine Notification' -> 'Add penalty' for the Values of the Attribute 'concept:name':    number of non-zero values: 72334 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Value 'Payment' for Event Attribute 'concept:name':    number of non-zero values: 69715 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Values for Event Attribute 'totalPaymentAmount':    number of non-zero values: 69714 ; quantiles of the non-zero: {0.0: 1.32, 0.25: 35.0, 0.5: 37.75, 0.75: 51.5, 1.0: 4021.0}
+Value 'Send for Credit Collection' for Event Attribute 'concept:name':    number of non-zero values: 59013 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Add penalty' -> 'Send for Credit Collection' for the Values of the Attribute 'concept:name':    number of non-zero values: 57182 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Create Fine' -> 'Payment' for the Values of the Attribute 'concept:name':    number of non-zero values: 46952 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Add penalty' -> 'Payment' for the Values of the Attribute 'concept:name':    number of non-zero values: 18621 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Value 'Insert Date Appeal to Prefecture' for Event Attribute 'concept:name':    number of non-zero values: 4188 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Value 'Send Appeal to Prefecture' for Event Attribute 'concept:name':    number of non-zero values: 4141 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Payment' -> 'Payment' for the Values of the Attribute 'concept:name':    number of non-zero values: 4014 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Payment' -> 'Add penalty' for the Values of the Attribute 'concept:name':    number of non-zero values: 3902 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Insert Fine Notification' -> 'Payment' for the Values of the Attribute 'concept:name':    number of non-zero values: 3891 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Values for Event Attribute 'points':    number of non-zero values: 3548 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 2.0, 0.5: 2.0, 0.75: 5.0, 1.0: 10.0}
+Succession 'Insert Fine Notification' -> 'Insert Date Appeal to Prefecture' for the Values of the Attribute 'concept:name':    number of non-zero values: 3327 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Send Fine' -> 'Payment' for the Values of the Attribute 'concept:name':    number of non-zero values: 3300 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Insert Date Appeal to Prefecture' -> 'Add penalty' for the Values of the Attribute 'concept:name':    number of non-zero values: 2933 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Add penalty' -> 'Send Appeal to Prefecture' for the Values of the Attribute 'concept:name':    number of non-zero values: 2915 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Value 'C' for Event Attribute 'vehicleClass':    number of non-zero values: 2456 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Payment' -> 'Send for Credit Collection' for the Values of the Attribute 'concept:name':    number of non-zero values: 1538 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Value 'M' for Event Attribute 'vehicleClass':    number of non-zero values: 1198 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Insert Date Appeal to Prefecture' -> 'Send Appeal to Prefecture' for the Values of the Attribute 'concept:name':    number of non-zero values: 1159 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Value 'Receive Result Appeal from Prefecture' for Event Attribute 'concept:name':    number of non-zero values: 999 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Value 'Notify Result Appeal to Offender' for Event Attribute 'concept:name':    number of non-zero values: 896 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Receive Result Appeal from Prefecture' -> 'Notify Result Appeal to Offender' for the Values of the Attribute 'concept:name':    number of non-zero values: 829 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Add penalty' -> 'Insert Date Appeal to Prefecture' for the Values of the Attribute 'concept:name':    number of non-zero values: 658 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Send Appeal to Prefecture' -> 'Receive Result Appeal from Prefecture' for the Values of the Attribute 'concept:name':    number of non-zero values: 606 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Payment' -> 'Send Fine' for the Values of the Attribute 'concept:name':    number of non-zero values: 569 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Value 'Appeal to Judge' for Event Attribute 'concept:name':    number of non-zero values: 555 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Notify Result Appeal to Offender' -> 'Payment' for the Values of the Attribute 'concept:name':    number of non-zero values: 391 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Add penalty' -> 'Receive Result Appeal from Prefecture' for the Values of the Attribute 'concept:name':    number of non-zero values: 351 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Send Appeal to Prefecture' -> 'Add penalty' for the Values of the Attribute 'concept:name':    number of non-zero values: 347 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Insert Fine Notification' -> 'Appeal to Judge' for the Values of the Attribute 'concept:name':    number of non-zero values: 290 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Appeal to Judge' -> 'Add penalty' for the Values of the Attribute 'concept:name':    number of non-zero values: 281 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Notify Result Appeal to Offender' -> 'Send for Credit Collection' for the Values of the Attribute 'concept:name':    number of non-zero values: 257 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Send Fine' -> 'Insert Date Appeal to Prefecture' for the Values of the Attribute 'concept:name':    number of non-zero values: 161 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Notify Result Appeal to Offender' -> 'Appeal to Judge' for the Values of the Attribute 'concept:name':    number of non-zero values: 145 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Add penalty' -> 'Appeal to Judge' for the Values of the Attribute 'concept:name':    number of non-zero values: 80 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Payment' -> 'Insert Fine Notification' for the Values of the Attribute 'concept:name':    number of non-zero values: 74 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Appeal to Judge' -> 'Payment' for the Values of the Attribute 'concept:name':    number of non-zero values: 70 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
+Succession 'Add penalty' -> 'Notify Result Appeal to Offender' for the Values of the Attribute 'concept:name':    number of non-zero values: 53 ; quantiles of the non-zero: {0.0: 1.0, 0.25: 1.0, 0.5: 1.0, 0.75: 1.0, 1.0: 1.0}
