@@ -10,10 +10,10 @@ def safe_file_read(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             return f.read()
     except FileNotFoundError:
-        print(f"❌ 파일을 찾을 수 없습니다: {file_path}")
+        print(f"파일을 찾을 수 없습니다: {file_path}")
         return None
     except Exception as e:
-        print(f"❌ 파일 읽기 오류: {e}")
+        print(f"파일 읽기 오류: {e}")
         return None
 
 def generate_hypotheses_with_gemini(integrated_prompt, api_key, model="gemini-2.5-flash"):
@@ -33,7 +33,7 @@ def generate_hypotheses_with_gemini(integrated_prompt, api_key, model="gemini-2.
             )
         )
         
-        print("✅ API 호출 성공!")
+        print("API 호출 성공!")
         
         return {
             "success": True,
@@ -52,8 +52,8 @@ def generate_hypotheses_with_gemini(integrated_prompt, api_key, model="gemini-2.
 
 def main():
     # 파일 읽기
-    pm_text = safe_file_read('pm_text.txt')
-    synthesized_explanation = safe_file_read('sax4bpm_synthesized_prompt.txt')
+    pm_text = safe_file_read('results/pm_text.txt')
+    synthesized_explanation = safe_file_read('results/enhanced_sax4bpm_prompt.txt')
     
     if pm_text is None:
         print("❌ 필요한 파일을 읽을 수 없습니다.")
@@ -61,11 +61,11 @@ def main():
     
     # 프롬프트 생성
     total_prompt = f'''process abstraction: {pm_text}
-additional explanation: {synthesized_explanation}'''
+  additional explanation: {synthesized_explanation}'''
     
     # total_prompt = f'''process abstraction: {pm_text}'''
     
-    print(f"✅ 프롬프트 생성 완료 (길이: {len(total_prompt)} 문자)")
+    print(f"프롬프트 생성 완료 (길이: {len(total_prompt)} 문자)")
     
     # API 호출
     api_key = 'AIzaSyAi64Og23ja5e8jpe5hUkcEl2EWM_X-U7Y'
@@ -73,7 +73,7 @@ additional explanation: {synthesized_explanation}'''
     
     # 결과 처리
     if result["success"]:
-        print("✅ 가설 생성 성공!")
+        print("가설 생성 성공!")
         print("\n--- 생성된 가설 ---")
         print(result["response"])
         
@@ -83,7 +83,7 @@ additional explanation: {synthesized_explanation}'''
         print("\n📁 결과가 'generated_hypotheses.txt'에 저장되었습니다.")
         
     else:
-        print(f"❌ 가설 생성 실패: {result['error']}")
+        print(f"가설 생성 실패: {result['error']}")
 
 if __name__ == "__main__":
     main()

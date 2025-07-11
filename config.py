@@ -2,11 +2,10 @@ from sax.core.synthesis.llms.base_llm import ModelTypes
 
 SAX4BPM_CONFIG = {
     # 데이터 설정
-    'data_file': "Road Traffic Fine Management Process_1_all/Road_Traffic_Fine_Management_Process.xes.gz",
+    'data_file': "/Users/heehyeong/Downloads/practice/dataset/Road_Traffic_Fine_Management_Process.xes",
     
-    # 모델 설정 (기존 Gemini API 설정 대체)
-    'model_type': ModelTypes.OPENAI,
-    'model_name': "gpt-4",
+    'model_type': ModelTypes.GEMINI,  # OpenAI → Gemini로 변경
+    'model_name': "gemini-2.5-flash",
     'temperature': 0.7,
     
     # 분석 설정

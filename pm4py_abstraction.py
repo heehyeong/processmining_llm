@@ -7,7 +7,7 @@ if __name__ == "__main__":
     from pm4py.visualization.petri_net import visualizer as pn_visualizer
 
     # 로그 파일 경로 설정 (예: ./tests/input_data/example1.xes)
-    log_path = os.path.join("Road Traffic Fine Management Process_1_all/Road_Traffic_Fine_Management_Process.xes.gz")
+    log_path = os.path.join("dataset/Road Traffic Fine Management Process_1_all/Road_Traffic_Fine_Management_Process.xes.gz")
 
     # XES 로그 불러오기
     log = import_xes(log_path)
@@ -22,10 +22,24 @@ if __name__ == "__main__":
     pm_variants = pm4py.llm.abstract_variants(log)
     pm_model = pm4py.llm.abstract_dfg(log)
     pm_log = pm4py.llm.abstract_log_features(log)
+    user_query = '''
+QUESTION: Based on the detailed analysis, can you formulate specific, data-driven hypotheses for process optimization?
+
+Please provide detailed, data-driven hypotheses based on the comprehensive analysis above. Consider:
+- Process patterns and statistics from the process view
+- Concrete, actionable recommendations for process improvement
+
+Format your response with:
+1. Three specific hypotheses with supporting data
+2. Simulation scenarios for each hypothesis
+3. Expected outcomes with measurable KPIs
+4. Implementation considerations
+'''
 
     pm_text = f"""{pm_variants}
     process model: {pm_model}
-    event log: {pm_log}"""
+    event log: {pm_log}
+    user query: {user_query}"""
 
     # LLM 프롬프트 저장
     with open('pm_text.txt', 'w', encoding='utf-8') as f:
