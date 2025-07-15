@@ -2,7 +2,7 @@ from sax.core.synthesis.llms.base_llm import ModelTypes
 
 SAX4BPM_CONFIG = {
     # 데이터 설정
-    'data_file': "/Users/heehyeong/Downloads/practice/dataset/Road_Traffic_Fine_Management_Process.xes",
+    'data_file': "dataset/Road_Traffic_Fine_Management_Process.xes",
     
     'model_type': ModelTypes.GEMINI,  # OpenAI → Gemini로 변경
     'model_name': "gemini-2.5-flash",

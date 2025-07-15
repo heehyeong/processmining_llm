@@ -53,22 +53,31 @@ def generate_hypotheses_with_gemini(integrated_prompt, api_key, model="gemini-2.
 def main():
     # 파일 읽기
     pm_text = safe_file_read('results/pm_text.txt')
-    synthesized_explanation = safe_file_read('results/enhanced_sax4bpm_prompt.txt')
+    query = '''
+        Based on the textual abstraction of this business process, 
+        please provide:
+        1. Three specific optimization hypotheses with supporting data
+        2. Root cause analysis of performance bottlenecks
+        3. Actionable recommendations with expected measurable impact
+        4. Simulation scenarios for testing improvements
+    '''
+    # synthesized_explanation = safe_file_read('results/enhanced_sax4bpm_prompt.txt')
     
     if pm_text is None:
         print("❌ 필요한 파일을 읽을 수 없습니다.")
         return
     
     # 프롬프트 생성
-    total_prompt = f'''process abstraction: {pm_text}
-  additional explanation: {synthesized_explanation}'''
+    total_prompt = f'''Human: {query}
+                        process abstraction: {pm_text}'''
+#   additional explanation: {synthesized_explanation}'''
     
     # total_prompt = f'''process abstraction: {pm_text}'''
     
     print(f"프롬프트 생성 완료 (길이: {len(total_prompt)} 문자)")
     
     # API 호출
-    api_key = 'AIzaSyAi64Og23ja5e8jpe5hUkcEl2EWM_X-U7Y'
+    api_key = 'AIzaSyC8pzrlLuxPKyWL3R-1PVWzbQFVl7Igf5I'
     result = generate_hypotheses_with_gemini(total_prompt, api_key)
     
     # 결과 처리
