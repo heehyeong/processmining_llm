@@ -77,7 +77,7 @@ def main():
     print(f"프롬프트 생성 완료 (길이: {len(total_prompt)} 문자)")
     
     # API 호출
-    api_key = 'AIzaSyC8pzrlLuxPKyWL3R-1PVWzbQFVl7Igf5I'
+    api_key = 'your-key'
     result = generate_hypotheses_with_gemini(total_prompt, api_key)
     
     # 결과 처리
