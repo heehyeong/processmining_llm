@@ -12,7 +12,10 @@ pip install -r requirements.txt
   
  ### 2. Run the main codes
 - **Baseline**: hypo_gen.py
+  - generated_hypothese.txt에 결과 저장
 - **SAX4BPM**: main_sax4bpm_official.py
-- results/ 에 결과 저장
+  - results/comprehensive_analysis.txt 에 결과 저장
+- **Simulation**: simulation+trial.ipynb
+
 
 POSTECH lab internship (AIM lab.)
