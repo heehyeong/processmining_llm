@@ -17,5 +17,5 @@ pip install -r requirements.txt
   - results/comprehensive_analysis.txt 에 결과 저장
 - **Simulation**: simulation+trial.ipynb
 
-
+---
 POSTECH lab internship (AIM lab.)
