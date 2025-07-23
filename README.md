@@ -15,7 +15,7 @@ pip install -r requirements.txt
   - generated_hypothese.txt에 결과 저장
 - **SAX4BPM**: main_sax4bpm_official.py
   - results/comprehensive_analysis.txt 에 결과 저장
-- **Simulation**: simulation+trial.ipynb
+- **Simulation**: simulation+trial.ipynb 다운로드
 
 ---
 POSTECH lab internship (AIM lab.)
